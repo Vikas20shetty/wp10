@@ -13,21 +13,18 @@ if (isset($_SESSION['LAST_ACTIVITY']))
  
    if ($timeSinceLastActivity > $sessionTimeout) 
       { 
-       
         session_unset(); 
         session_destroy(); 
         echo "Session expired. Please log in again."; 
       } 
     else 
-      { 
-      
+      {       
         $_SESSION['LAST_ACTIVITY'] = $currentTime; 
         echo "Session active."; 
       } 
  } 
 else 
 { 
- 
     $_SESSION['LAST_ACTIVITY'] = time(); 
     echo "Session started."; 
 } 
