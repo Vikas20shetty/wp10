@@ -1,7 +1,7 @@
 <?php 
 if (isset($_POST['submit'])) { 
-    $username = $_POST['username']; 
-    $password = $_POST['password']; 
+    $username = $_POST['Username']; 
+    $password = $_POST['Password']; 
     $conn = new mysqli("localhost", "root", "", "student_database"); 
     $sql = "select * from student_login where username='" . $username . "' and password = '" . $password . "'"; 
     $result = mysqli_query($conn, $sql); 
@@ -24,4 +24,4 @@ CREATE TABLE student_login (
 
 
 INSERT INTO student_login (username, password) 
-VALUES ('kiran000@gmail.com', 'mypassword');
+VALUES ('vikas', 'vikas@123');
